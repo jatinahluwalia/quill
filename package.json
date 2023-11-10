@@ -13,6 +13,7 @@
   "dependencies": {
     "@kinde-oss/kinde-auth-nextjs": "^2.0.4",
     "@prisma/client": "5.5.2",
+    "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-slot": "^1.0.2",
     "@tanstack/react-query": "4.36",
     "@trpc/client": "^10.43.1",
@@ -21,8 +22,9 @@
     "@trpc/server": "^10.43.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
+    "dayjs": "^1.11.10",
     "lucide-react": "^0.292.0",
-    "next": "latest",
+    "next": "^14.0.2",
     "react": "latest",
     "react-dom": "latest",
     "tailwind-merge": "^2.0.0",

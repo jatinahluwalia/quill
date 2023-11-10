@@ -15,14 +15,14 @@ const Page = () => {
       if (success) {
         router.push(origin ? `/${origin}` : "/dashboard");
       }
+      console.log("success");
     },
     onError(err) {
       if (err.data?.code === "UNAUTHORIZED") {
         router.push("/sign-in");
       }
+      console.log(err);
     },
-    retry: true,
-    retryDelay: 500,
   });
 
   return (
