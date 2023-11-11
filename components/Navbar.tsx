@@ -1,12 +1,12 @@
-import Link from "next/link";
-import MaxWidthWrapper from "./MaxWidthWrapper";
-import { buttonVariants } from "./ui/button";
+import Link from 'next/link';
+import MaxWidthWrapper from './MaxWidthWrapper';
+import { buttonVariants } from './ui/button';
 import {
   LoginLink,
   RegisterLink,
   getKindeServerSession,
-} from "@kinde-oss/kinde-auth-nextjs/server";
-import { ArrowRight } from "lucide-react";
+} from '@kinde-oss/kinde-auth-nextjs/server';
+import { ArrowRight } from 'lucide-react';
 // import UserAccountNav from "./UserAccountNav";
 // import MobileNav from "./MobileNav";
 
@@ -30,23 +30,23 @@ const Navbar = async () => {
                 <Link
                   href="/pricing"
                   className={buttonVariants({
-                    variant: "ghost",
-                    size: "sm",
+                    variant: 'ghost',
+                    size: 'sm',
                   })}
                 >
                   Pricing
                 </Link>
                 <LoginLink
                   className={buttonVariants({
-                    variant: "ghost",
-                    size: "sm",
+                    variant: 'ghost',
+                    size: 'sm',
                   })}
                 >
                   Sign in
                 </LoginLink>
                 <RegisterLink
                   className={buttonVariants({
-                    size: "sm",
+                    size: 'sm',
                   })}
                 >
                   Get started <ArrowRight className="ml-1.5 h-5 w-5" />
@@ -57,8 +57,8 @@ const Navbar = async () => {
                 <Link
                   href="/dashboard"
                   className={buttonVariants({
-                    variant: "ghost",
-                    size: "sm",
+                    variant: 'ghost',
+                    size: 'sm',
                   })}
                 >
                   Dashboard

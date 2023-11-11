@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import { trpc } from "@/app/_trpc/client";
-import UploadButton from "./UploadButton";
-import { Ghost, Loader2, MessageSquare, Plus, Trash } from "lucide-react";
-import { Skeleton } from "./ui/skeleton";
-import Link from "next/link";
-import dayjs from "dayjs";
-import { Button } from "./ui/button";
-import { useState } from "react";
+import { trpc } from '@/app/_trpc/client';
+import UploadButton from './UploadButton';
+import { Ghost, Loader2, MessageSquare, Plus, Trash } from 'lucide-react';
+import { Skeleton } from './ui/skeleton';
+import Link from 'next/link';
+import dayjs from 'dayjs';
+import { Button } from './ui/button';
+import { useState } from 'react';
 
 const Dashboard = () => {
   const [currentlyDeltingFile, setCurrentlyDeltingFile] = useState<
@@ -67,7 +67,7 @@ const Dashboard = () => {
                 <div className="mt-4 grid grid-cols-3 place-items-center gap-6 px-6 py-2 text-xs text-zinc-500">
                   <div className="flex items-center gap-2">
                     <Plus className="h-4 w-4" />
-                    {dayjs(new Date(file.createdAt)).format("MMM YYYY")}
+                    {dayjs(new Date(file.createdAt)).format('MMM YYYY')}
                   </div>
                   <div className="flex items-center gap-2">
                     <MessageSquare className="h-4 w-4" />
@@ -75,8 +75,8 @@ const Dashboard = () => {
                   </div>
                   <Button
                     className="w-full"
-                    size={"sm"}
-                    variant={"destructive"}
+                    size={'sm'}
+                    variant={'destructive'}
                     onClick={() => deleteFile({ id: file.id })}
                   >
                     {currentlyDeltingFile === file.id ? (
@@ -92,7 +92,7 @@ const Dashboard = () => {
       ) : isLoading ? (
         Array.from({ length: 3 }).map((_, i) => (
           <Skeleton
-            key={"skeleton-" + i}
+            key={'skeleton-' + i}
             className="mt-5 h-[100px] bg-zinc-200"
           />
         ))

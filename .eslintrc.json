@@ -1,4 +1,15 @@
 {
   "plugins": ["tailwindcss"],
-  "extends": ["next/core-web-vitals", "plugin:tailwindcss/recommended"]
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:tailwindcss/recommended",
+    "prettier",
+    "standard"
+  ],
+  "rules": {
+    "semi": "off",
+    "space-before-function-paren": "off",
+    "comma-dangle": "off",
+    "multiline-ternary": "off"
+  }
 }
