@@ -1,0 +1,23 @@
+'use client';
+
+import React from 'react';
+import { Button } from './ui/button';
+import { ArrowRight } from 'lucide-react';
+import { trpc } from '@/app/_trpc/client';
+
+const UpgradeButton = () => {
+  const { mutate: createStripeSession } = trpc.createStripeSession.useMutation({
+    onSuccess: ({ url }) => {
+      console.log({ url });
+      window.location.href = url ?? '/dashboard/billing';
+    },
+  });
+
+  return (
+    <Button className="w-full" onClick={() => createStripeSession()}>
+      Upgrade now <ArrowRight className="ml-1.5 h-5 w-5" />
+    </Button>
+  );
+};
+
+export default UpgradeButton;

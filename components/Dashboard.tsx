@@ -91,10 +91,7 @@ const Dashboard = () => {
         </ul>
       ) : isLoading ? (
         Array.from({ length: 3 }).map((_, i) => (
-          <Skeleton
-            key={'skeleton-' + i}
-            className="mt-5 h-[100px] bg-zinc-200"
-          />
+          <Skeleton key={'skeleton-' + i} className="mt-5 h-[100px]" />
         ))
       ) : (
         <div className="mt-16 flex flex-col items-center gap-2">
