@@ -16,6 +16,7 @@ declare global {
       UPLOADTHING_APP_ID: string;
       PINECONE_API_KEY: string;
       OPENAI_KEY: string;
+      STRIPE_SECRET_KEY: string;
     }
   }
 }

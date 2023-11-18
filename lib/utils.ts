@@ -8,5 +8,5 @@ export function cn(...inputs: ClassValue[]) {
 export const absoluteURL = (path: string) => {
   if (typeof window !== 'undefined') return path;
   if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}${path}`;
-  return `http://localhost:${process.env.PORT || 3000}${path}`;
+  return `${process.env.NEXT_PUBLIC_URL}${path}`;
 };
