@@ -49,15 +49,16 @@ const UploadDropzone = () => {
         const progressInterval = startSimulatedProgress();
 
         try {
-          const res = await new Promise<UploadFileResponse[]>(
+          const res = await new Promise<UploadFileResponse<any>[]>(
             (resolve, reject) => {
               toast.promise(startUpload(acceptedFile), {
                 loading: 'Uploading file...',
                 success(data) {
                   if (!data) {
                     throw reject(new Error());
+                  } else {
+                    resolve(data);
                   }
-                  resolve(data);
 
                   return 'File uploaded.';
                 },
